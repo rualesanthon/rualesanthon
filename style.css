@@ -9,7 +9,7 @@ body {
 
 /* Header styles */
 header {
-  background-color: #222;
+  background: linear-gradient(to right, #222, #444); /* Gradient background */
   color: #ff6600;
   padding: 20px;
   text-align: center;
@@ -57,6 +57,8 @@ nav ul li a:hover {
 /* Main section styles */
 main {
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
 }
 
 /* Section headings */
@@ -81,11 +83,13 @@ section h2 {
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent; /* Add transparent border */
 }
 
 .portfolio-item img:hover {
   transform: scale(1.05);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  border-color: #ff6600; /* Change border color on hover */
 }
 
 /* Footer styles */
@@ -97,4 +101,9 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  transition: background-color 0.3s ease; /* Footer background color transition */
+}
+
+footer:hover {
+  background-color: #333; /* Change footer background color on hover */
 }
