@@ -1,94 +1,120 @@
-/* Body styles */
+/* General Styles */
 body {
   font-family: 'Roboto', sans-serif;
-  background: #1e1e1e;
-  color: #f0f0f0;
+  background: #f4f4f4;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-/* Header styles */
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header Styles */
 header {
-  background: #008080; /* Teal background */
-  color: #ffffff;
-  padding: 20px;
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header h1 {
   text-align: center;
-  animation: fadeIn 1s ease forwards;
+  margin: 0;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+header nav {
+  text-align: center;
+  margin-top: 10px;
 }
 
-/* Section styles */
-section {
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #00cccc;
+}
+
+/* Main Styles */
+main {
+  padding: 20px 0;
+}
+
+.resume {
+  background: #fff;
+  margin: 20px 0;
   padding: 20px;
-  margin: 20px;
-  background: #2b2b2b;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section headings */
-section h2 {
-  font-size: 30px;
-  color: #00cccc; /* Lighter teal */
-  border-bottom: 2px solid #008080;
+/* Section Headings */
+.resume h2 {
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #00cccc;
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
 
-/* Info, skills, experience lists */
-section ul {
-  list-style-type: none;
+/* Lists */
+.resume ul {
+  list-style: none;
   padding: 0;
 }
 
-section ul li {
-  background: #333;
-  margin: 5px 0;
+.resume ul li {
+  background: #f4f4f4;
+  margin: 10px 0;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-/* Socials section */
+/* Socials Section */
 .socials ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 0;
 }
 
 .socials ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .socials ul li a {
-  color: #ffffff;
-  font-size: 20px;
+  color: #333;
+  font-size: 24px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .socials ul li a:hover {
-  color: #00cccc; /* Lighter teal */
+  color: #00cccc;
 }
 
-/* Footer styles */
+/* Footer Styles */
 footer {
-  background-color: #008080; /* Teal background */
-  color: #ffffff;
+  background: #333;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  padding: 20px 0;
 }
 
-footer:hover {
-  background-color: #00cccc; /* Lighter teal */
+footer p {
+  margin: 0;
 }
