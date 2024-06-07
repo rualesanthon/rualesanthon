@@ -1,122 +1,54 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Container styles */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
-}
-
-/* Header styles */
 header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #333 3px solid;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-header h1 {
-    float: left;
-    display: inline;
-    font-size: 24px;
-    line-height: 60px;
-    padding: 0 20px;
+.resume {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
 }
 
-header ul {
-    float: right;
-    list-style: none;
-    margin-top: 25px;
+.info, .skills, .experience {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header ul li {
-    display: inline;
+.info h2, .skills h2, .experience h2 {
+  margin-top: 0;
 }
 
-header ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 20px;
-    font-size: 20px;
-    transition: all 0.3s ease-in;
+.skills ul, .experience ul {
+  padding: 0;
+  margin: 0;
 }
 
-header ul li a:hover {
-    background: #555;
-    color: #fff;
+.skills li, .experience li {
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+  animation: slideIn 0.5s ease forwards;
 }
 
-/* Showcase styles */
-.showcase {
-    background: url('your-background-image.jpg') no-repeat center center/cover;
-    height: 600px;
-    color: #fff;
-    text-align: center;
-}
-
-.showcase h1 {
-    margin-top: 200px;
-    font-size: 50px;
-}
-
-.showcase p {
-    font-size: 20px;
-}
-
-/* Section styles */
-section {
-    padding: 20px 0;
-}
-
-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* Footer styles */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Media queries */
-@media(max-width: 768px) {
-    header h1 {
-        float: none;
-    }
-
-    header ul {
-        float: none;
-        text-align: center;
-        margin-top: 0;
-    }
-
-    header ul li {
-        display: block;
-    }
-
-    header ul li a {
-        padding: 10px 0;
-    }
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
