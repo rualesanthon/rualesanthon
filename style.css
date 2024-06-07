@@ -79,13 +79,6 @@ main {
   gap: 20px;
 }
 
-.profile img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
 /* Lists */
 .resume ul {
   list-style: none;
@@ -110,7 +103,7 @@ main {
   margin: 0 15px;
 }
 
-socials ul li a {
+.socials ul li a {
   color: #333;
   font-size: 24px;
   text-decoration: none;
