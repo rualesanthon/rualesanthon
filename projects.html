@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Projects</h1>
+    </header>
+    <main>
+      <section class="project-list">
+        <article class="project">
+          <div class="image-container">
+            <img src="pic1.jpg" alt="Project Image 1" class="project-img">
+            <button class="fullscreen-btn" onclick="toggleFullscreen(this.previousElementSibling)"><i class="fas fa-expand"></i></button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="image-container">
+            <img src="pic2.jpg" alt="Project Image 2" class="project-img">
+            <button class="fullscreen-btn" onclick="toggleFullscreen(this.previousElementSibling)"><i class="fas fa-expand"></i></button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="image-container">
+            <img src="pic3.jpg" alt="Project Image 3" class="project-img">
+            <button class="fullscreen-btn" onclick="toggleFullscreen(this.previousElementSibling)"><i class="fas fa-expand"></i></button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="image-container">
+            <img src="pic4.jpg" alt="Project Image 4" class="project-img">
+            <button class="fullscreen-btn" onclick="toggleFullscreen(this.previousElementSibling)"><i class="fas fa-expand"></i></button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="image-container">
+            <img src="pic5.jpg" alt="Project Image 5" class="project-img">
+            <button class="fullscreen-btn" onclick="toggleFullscreen(this.previousElementSibling)"><i class="fas fa-expand"></i></button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="image-container">
+            <img src="pic6.jpg" alt="Project Image 6" class="project-img">
+            <button class="fullscreen-btn" onclick="toggleFullscreen(this.previousElementSibling)"><i class="fas fa-expand"></i></button>
+          </div>
+        </article>
+        <article class="project">
+          <div class="image-container">
+            <img src="pic7.jpg" alt="Project Image 7" class="project-img">
+            <button class="fullscreen-btn" onclick="toggleFullscreen(this.previousElementSibling)"><i class="fas fa-expand"></i></button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <button onclick="location.href='index.html'">Back to Portfolio</button>
+    </footer>
+  </div>
+  <script>
+    function toggleFullscreen(img) {
+      if (img.requestFullscreen) {
+        img.requestFullscreen();
+      } else if (img.mozRequestFullScreen) { /* Firefox */
+        img.mozRequestFullScreen();
+      } else if (img.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        img.webkitRequestFullscreen();
+      } else if (img.msRequestFullscreen) { /* IE/Edge */
+        img.msRequestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
