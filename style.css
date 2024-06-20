@@ -9,11 +9,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* Prevent the body from scrolling */
 }
 
 /* Container styles */
 .container {
   display: flex;
+  flex-direction: column;
   background: rgba(17, 17, 17, 0.9); /* Slightly transparent background for the content */
   border: 4px solid #0f0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -21,8 +23,9 @@ body {
   overflow: hidden;
   width: 80%;
   max-width: 1000px;
+  height: 90vh; /* Ensure container fits within viewport height */
+  overflow-y: auto; /* Enable scrolling within the container */
 }
-
 
 /* Sidebar styles */
 aside {
@@ -84,9 +87,10 @@ aside {
 
 /* Main content styles */
 main {
-  width: 70%;
+  width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  overflow-y: auto; /* Ensure the main content can scroll if content overflows */
 }
 
 section {
@@ -113,6 +117,73 @@ section ul {
   padding-left: 20px;
 }
 
+/* Projects section styles */
+.projects {
+  margin-bottom: 30px;
+}
+
+.projects h2 {
+  font-size: 1.5em;
+  color: #0f0;
+  border-bottom: 2px solid #0f0;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  background: #333;
+  padding: 20px;
+  border: 2px solid #0f0;
+  border-radius: 10px;
+  width: calc(50% - 20px); /* Adjust for gaps */
+  box-sizing: border-box;
+}
+
+.project h2 {
+  font-size: 1.2em;
+  color: #0f0;
+  margin-bottom: 10px;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.fullscreen-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.project p {
+  font-size: 1em;
+  color: #ccc;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .container {
@@ -133,5 +204,9 @@ section ul {
   .profile-img {
     width: 120px;
     height: 120px;
+  }
+
+  .project {
+    width: 100%;
   }
 }
